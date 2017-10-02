@@ -134,13 +134,51 @@ def less_by_ten? (a, b, c)
 end
 
 # TODO - write fizz_string
-
-def fizz_string ()
 	
+def fizz_string (str)
+	if str.chars[0] == "f"
+		if str[str.length-1] == "b"
+			return "FizzBuzz"
+		end
+	end
+	if str.chars[0] == "f"
+		return "Fizz"
+	end
+	if str.chars[str.length-1] == "b"
+		return "Buzz"
+	end
+
+	return str
 end
 
 # TODO - write first_last_six?
+	
+def first_last_six? (list)
+
+	return list[0] == 6 || list[list.length-1] == 6
+
+end
 
 # TODO - write rotate_left
 
+def rotate_left (trio)
+
+	return trio[1], trio[2], trio[0]
+
+end
+	
 # TODO - write double23?
+
+def double23? (array)
+	twos = 0
+	threes = 0
+	array.each do |num|
+		if num == 2
+			twos += 1
+		end
+		if num == 3
+			threes += 1
+		end
+	end
+	return twos == 2 || threes == 2	
+end
